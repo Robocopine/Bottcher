@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PageController!{% endblock %}
+
+{% block body %}
+    <!-- Team-->
+    <header class="masthead page-section bg-light" id="family">
+        <div class="container">
+            <div class="text-center my-5 py-5">
+                <h1 class="section-heading text-dark mb-5 pb-5">Famille Böttcher</h1>
+                <!-- h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3 -->
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="family-member">
+                        <img class="mx-auto rounded-circle" width="250px" src="./src/family/avatar/patrick.jpg" alt="..." />
+                        <h4 class="text-dark">Patrick</h4>
+                        <p class="text-muted">Vins libres</p>
+                        <a class="btn btn-dark btn-social mx-2" href="http://www.vinslibres.net/" title="Vins libres" aria-label="Blog Vins libres"><i class="fa-solid fa-wine-glass"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="mailto: patrick@bottcher.be" aria-label="Mail Patrick"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="family-member">
+                        <img class="mx-auto rounded-circle" width="250px" src="./src/family/avatar/dominique.jpg" alt="..." />
+                        <h4 class="text-dark">Dominique</h4>
+                        <p class="text-muted">Pharmacienne</p>
+                        <a class="btn btn-dark btn-social mx-2" href="http://www.larouepharma.be/" title="Pharmacie La roue" aria-label="Blog Vins libres"><i class="fa-solid fa-pills"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="family-member">
+                        <img class="mx-auto rounded-circle" width="250px" src="./src/family/avatar/julie.jpg" alt="..." />
+                        <h4 class="text-dark">Julie</h4>
+                        <p class="text-muted">Privé</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock %}
