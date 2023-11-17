@@ -1,0 +1,50 @@
+{% extends 'family/base.html.twig' %}
+
+{% block title %}File index{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="container-fluid px-4">
+            <h1 class="mt-4">Mes fichiers</h1>
+            <ol class="breadcrumb mb-4">
+                <li class="breadcrumb-item">Dashboard</li>
+                <li class="breadcrumb-item active">Fichiers</li>
+            </ol>
+            <div class="row justify-content-center">
+                <div class="col-3 text-center">
+                    <a class="text-decoration-none" href="" title="Galerie photo image" aria-label="Galerie photo image">
+                        <span class="btn btn-light border border-secondary rounded-circle p-5 mx-2"><i class="fa-solid fa-photo-film fs-2" width="40px"></i></span>
+                        <p class="text-dark fw-bold pt-2 fs-4">Galerie média</p>
+                    </a>
+                </div>
+                <div class="col-3 text-center">
+                    <a class="text-decoration-none" href="" title="Galerie photo image" aria-label="Galerie photo image">
+                        <span class="btn btn-light border border-secondary rounded-circle p-5 mx-2"><i class="fa-solid fa-file-lines fs-2" width="40px"></i></span>
+                        <p class="text-dark fw-bold pt-2 fs-4">Fichiers</p>
+                    </a>
+                </div>
+            </div>
+            <h2 class="py-5">Derniers ajouts</h2>
+            <div class="row">
+                <div class="col-2">
+                    <div class="card border border-primary-subtle btn btn-light" style="width: 18rem;">
+                        <div class="card-body d-flex align-items-center flex-column" style="height:250px;">
+                            <h5 class="card-title mb-auto">name file</h5>
+                            <div class="fs-1 my-auto" ><i class="fa-regular fa-file-pdf"></i></div>
+                            <div class="mt-auto"><small class="text-muted fw-light">date</small></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card border border-primary-subtle btn btn-light" style="width: 18rem;">
+                        <div class="card-body d-flex align-items-center flex-column" style="height:250px;">
+                            <h5 class="card-title mb-auto">name file</h5>
+                            <div class="fs-3 my-auto"><img src="{{ asset('./src/family/avatar/dominique.jpg') }}" class="img-fluid rounded w-50" alt=""></div>
+                            <div class="mt-auto"><small class="text-muted fw-light">date</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

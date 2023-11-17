@@ -2,6 +2,7 @@
     "devDependencies": {
         "@babel/core": "^7.17.0",
         "@babel/preset-env": "^7.16.0",
+        "@babel/preset-react": "^7.0.0",
         "@symfony/webpack-encore": "^4.5.0",
         "core-js": "^3.23.0",
         "regenerator-runtime": "^0.13.9",
@@ -21,7 +22,9 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^6.4.2",
+        "@popperjs/core": "^2.11.8",
         "bootstrap": "^3.4.1",
+        "detect-autofill": "^1.1.4",
         "jquery": "^3.7.1"
     }
 }

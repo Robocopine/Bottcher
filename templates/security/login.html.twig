@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    <!-- Login -->
+    <section class="masthead page-section bg-light" id="family">
+        <div class="container">
+            <div class="text-center my-xl-5 py-xl-5 pt-lg-0 mt-5">
+                <h1 class="section-heading text-dark ">Connexion</h1>
+                <!-- h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3 -->
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-4 card p-5">
+                    <form method="post">
+                        {% if error %}
+                            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                        {% endif %}
+
+                        {% if app.user %}
+                            <div class="mb-3">
+                                You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('logout') }}">Logout</a>
+                            </div>
+                        {% endif %}
+
+                        <h2 class="h3 mb-5 font-weight-normal">Connectez-vous s'il vous plaît</h2>
+                        <label for="inputUsername">Prénom</label>
+                        <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" autocomplete="username" required autofocus><br/>
+                        <label for="inputPassword">Mot de passe</label>
+                        <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+                        <input type="hidden" name="_csrf_token"
+                            value="{{ csrf_token('authenticate') }}"
+                        ><br/>
+                        <button class="btn btn-dark" type="submit">
+                            Connexion
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
